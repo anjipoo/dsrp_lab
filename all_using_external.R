@@ -184,7 +184,7 @@ varImpPlot(model_rf)
 df7 <- read.csv("Mall_Customers.csv")
 
 # select numeric columns
-num_df <- df7[, sapply(df7, is.numeric)]
+num_df <- df7[, c("Age", "Annual.Income..k..", "Spending.Score..1.100.")]
 
 # scale
 df7_scaled <- scale(num_df)
