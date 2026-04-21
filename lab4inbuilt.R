@@ -25,6 +25,7 @@ summary(model)
 #pred
 pred<-predict(model, test, type="response")
 pred_cls<-ifelse(pred>=0.5, 1,0)
+pred_cls <- factor(pred_cls, levels = c(0,1))
 
 #eval
 acc<-mean(pred_cls==test$am)
